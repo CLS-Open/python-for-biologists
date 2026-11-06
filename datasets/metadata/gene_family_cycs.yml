@@ -1,0 +1,19 @@
+dataset: gene_family_cycs
+file: datasets/sample/gene_family_cycs.fasta
+synthetic: false
+source: "UniProt REST API \u2014 https://rest.uniprot.org/uniprotkb/search"
+query: 'accessions=P99999,P62897,P62898,Q6IQM2,Q6GQE4,P84029,P00044,P29380 (curated
+  cytochrome c orthologues: P99999 Homo sapiens CYCS; P62897 Mus musculus Cycs; P62898
+  Rattus norvegicus Cycs; Q6IQM2 Danio rerio cyc; Q6GQE4 Xenopus laevis cycs-a; P84029
+  Drosophila melanogaster Cyt-c-p; P00044 Saccharomyces cerevisiae CYC1; P29380 Arabidopsis
+  thaliana CC-1)'
+retrieved: '2026-11-06'
+license: "CC BY 4.0 (UniProt Terms of Use; data \xA9 the UniProt Consortium)"
+attribution: The UniProt Consortium, UniProt Knowledgebase (UniProtKB/Swiss-Prot),
+  https://www.uniprot.org
+description: cytochrome c (CYCS) orthologues, one reviewed entry per species, 8 species
+used_for: 'the capstone: characterise one gene family across species'
+sha256: 4f3fec550269aee9af077ca04a07c5d12ba3ed4aeb255b111f048a6c614f2762
+bytes: 1594
+records: 8
+regenerate: python scripts/fetch_datasets.py --refetch

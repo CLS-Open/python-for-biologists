@@ -1,0 +1,86 @@
+site_name: Python Foundations for the Life Sciences — CLS-Open #1
+site_description: >-
+  A beginner Python course for life scientists: read real protein records, compute what
+  they contain, find the defects real files have, and build reports others can re-run.
+site_url: https://cls-open.github.io/python-for-biologists/
+repo_url: https://github.com/cls-open/python-for-biologists
+repo_name: cls-open/python-for-biologists
+edit_uri: edit/main/docs/
+copyright: >-
+  Content CC BY 4.0 · code MIT · data © the UniProt Consortium (CC BY 4.0).
+  Part of the CLS-Open initiative.
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+# Deliberately no `strict: true` here — CI passes `--strict` explicitly so that a local
+# build without it stays fast and forgiving while the deploy job stays unforgiving.
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: installation.md
+      - Prerequisites: prerequisites.md
+      - Learning path: learning_path.md
+  - Modules:
+      - "1 · Your environment, your evidence": modules/01-environment-and-jupyter.md
+      - "2 · Types, control flow, sequences": modules/02-types-control-flow-sequences.md
+      - "3 · Functions, modules, errors": modules/03-functions-modules-errors.md
+  - Practicals:
+      - "01 · Environment and first report": practicals/practical-01-setup-and-first-report.md
+      - "02 · Composition by hand": practicals/practical-02-composition-by-hand.md
+      - "03 · Traceback forensics": practicals/practical-03-traceback-forensics.md
+      - "04 · Write a parser": practicals/practical-04-write-a-parser.md
+      - "05 · Reproducible workflow": practicals/practical-05-reproducible-workflow.md
+  - Assessments:
+      - Assignment 01: assessments/assignment-01-environment-log.md
+      - Assignment 02: assessments/assignment-02-composition-report.md
+      - Assignment 03: assessments/assignment-03-mini-tool.md
+      - Challenge 01: assessments/challenge-01-ambiguous-alphabets.md
+      - Challenge 02: assessments/challenge-02-fail-loudly.md
+      - Quiz 1 (with answer key): assessments/quiz-01-modules-1-3.md
+  - For instructors:
+      - Instructor pack: instructor/index.md
+      - Teaching plans: instructor/teaching-plans.md
+  - About:
+      - Validation: validation.md
+      - Limitations: limitations.md
+      - References: references.md
+      - Roadmap: roadmap.md

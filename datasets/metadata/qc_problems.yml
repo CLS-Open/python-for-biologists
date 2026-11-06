@@ -1,0 +1,40 @@
+dataset: qc_problems
+file: datasets/sample/qc_problems.fasta
+synthetic: false
+source: derived from datasets/sample/gene_family_cycs.fasta (UniProt records, CC BY
+  4.0)
+retrieved: '2026-11-06'
+license: "CC BY 4.0 \u2014 original data \xA9 the UniProt Consortium; alterations\
+  \ by CLS-Open"
+attribution: The UniProt Consortium, UniProtKB/Swiss-Prot, https://www.uniprot.org
+description: Real cytochrome c records with seven defects planted on purpose, so that
+  the quality-control checks have something to find. Every alteration is listed below.
+used_for: module 3 (functions and error handling) and practical 2 (QC)
+planted_defects:
+- id: pl_duplicate
+  source_accession: P99999
+  alteration: written twice, byte-identical (the `cat file >> file` accident); the
+    identifier therefore appears twice in the file
+- id: pl_internal_stop
+  source_accession: P62897
+  alteration: residue 53 changed from 'N' to '*' (internal stop)
+- id: pl_invalid_residue
+  source_accession: P62898
+  alteration: residue 11 changed from 'F' to '1' (not a residue letter at all)
+- id: pl_lowercase_whitespace
+  source_accession: Q6IQM2
+  alteration: sequence lower-cased; a double space inserted after residue 20 and a
+    tab after residue 70
+- id: pl_truncated
+  source_accession: Q6GQE4
+  alteration: truncated to the first 60 of 105 residues (a cut-off download)
+- id: pl_ambiguous_rich
+  source_accession: P84029
+  alteration: every 4th residue replaced with 'X' (27 of 108 ambiguous)
+- id: pl_empty_record
+  source_accession: null
+  alteration: header with no sequence lines at all
+sha256: 8e8adae1580bfb781d4d993dcd5826f1b7c485eb8c323683c741651cd01ed32e
+bytes: 1392
+records: 8
+regenerate: python scripts/make_qc_dataset.py

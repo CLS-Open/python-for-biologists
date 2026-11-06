@@ -1,0 +1,21 @@
+dataset: uniprot_human_subset
+file: datasets/sample/uniprot_human_subset.fasta
+synthetic: false
+source: "UniProt REST API \u2014 https://rest.uniprot.org/uniprotkb/search"
+query: organism_id:9606 AND reviewed:true AND length:[100 TO 199] -> first 10 by accession;
+  organism_id:9606 AND reviewed:true AND length:[200 TO 299] -> first 10 by accession;
+  organism_id:9606 AND reviewed:true AND length:[300 TO 399] -> first 10 by accession;
+  organism_id:9606 AND reviewed:true AND length:[400 TO 499] -> first 10 by accession;
+  organism_id:9606 AND reviewed:true AND length:[500 TO 599] -> first 10 by accession;
+  organism_id:9606 AND reviewed:true AND length:[600 TO 699] -> first 10 by accession
+retrieved: '2026-11-06'
+license: "CC BY 4.0 (UniProt Terms of Use; data \xA9 the UniProt Consortium)"
+attribution: The UniProt Consortium, UniProt Knowledgebase (UniProtKB/Swiss-Prot),
+  https://www.uniprot.org
+description: 60 reviewed human (taxid 9606) UniProtKB/Swiss-Prot entries, 10 per 100-aa
+  band from 100 to 699 aa
+used_for: sequence statistics, composition, molecular weight, windowed plots
+sha256: 7b58bde9f78105f0db70d865a1fd2cd8ddf874fa5f997ae0a1dc4ec62c4a689a
+bytes: 30058
+records: 60
+regenerate: python scripts/fetch_datasets.py --refetch
